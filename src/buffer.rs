@@ -12,7 +12,7 @@ use crate::error::Result;
 use crate::format::{BaseFormat, Format, FormatLayout};
 
 ///
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Buffer(pub(crate) GLuint, GLbitfield);
 
 impl Object for Buffer {

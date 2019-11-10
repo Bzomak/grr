@@ -8,7 +8,7 @@ use crate::error::Result;
 
 /// Vertex array handle.
 #[repr(transparent)]
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct VertexArray(pub(crate) GLuint);
 
 impl Object for VertexArray {
