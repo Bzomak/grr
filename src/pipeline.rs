@@ -24,7 +24,7 @@ use crate::Compare;
 /// via an built-in compiler. Beside the shader representation in text form (GLSL) with GL 4.6 comes also support
 /// for the binary SPIR-V format.
 #[repr(transparent)]
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq)]
 pub struct Shader(GLuint);
 
 impl Object for Shader {
@@ -38,7 +38,7 @@ impl Object for Shader {
 ///
 /// Specifies how draw or dispatch commands are executed.
 #[repr(transparent)]
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq)]
 pub struct Pipeline(pub(crate) GLuint);
 
 impl Object for Pipeline {
